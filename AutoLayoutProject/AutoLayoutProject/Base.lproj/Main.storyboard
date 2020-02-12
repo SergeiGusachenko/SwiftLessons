@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayoutProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="4jK-se-Mtl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTY-F7-08V">
+                                <rect key="frame" x="64.666666666666686" y="500" width="285" height="69"/>
+                                <state key="normal" title="Sign in with Google" backgroundImage="Google">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUX-Jz-LFW">
+                                <rect key="frame" x="64.666666666666686" y="577" width="285" height="69"/>
+                                <state key="normal" title="Sign in with Email" backgroundImage="Email">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login or create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJs-2I-Fyr">
+                                <rect key="frame" x="105" y="352.66666666666669" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBi-ax-V9l">
+                                <rect key="frame" x="165.33333333333334" y="266" width="83.666666666666657" height="76.666666666666686"/>
+                                <string key="text">Social
+Squid</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wey-uI-4hA">
+                                <rect key="frame" x="64.666666666666686" y="423" width="285" height="69"/>
+                                <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Sign in with Facebook" backgroundImage="FB">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wey-uI-4hA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="9.5" id="0mj-d1-Hsm"/>
+                            <constraint firstItem="uUX-Jz-LFW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3mM-7h-u93"/>
+                            <constraint firstItem="oTY-F7-08V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Afx-tP-YgO"/>
+                            <constraint firstAttribute="trailing" secondItem="4jK-se-Mtl" secondAttribute="trailing" id="Dd4-Wh-2PY"/>
+                            <constraint firstItem="DJs-2I-Fyr" firstAttribute="top" secondItem="UBi-ax-V9l" secondAttribute="bottom" constant="10" id="LQJ-A4-RTB"/>
+                            <constraint firstItem="4jK-se-Mtl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LZX-wu-uBn"/>
+                            <constraint firstItem="UBi-ax-V9l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NGM-NN-4ud"/>
+                            <constraint firstItem="oTY-F7-08V" firstAttribute="top" secondItem="Wey-uI-4hA" secondAttribute="bottom" constant="8" id="aXP-VR-fV9"/>
+                            <constraint firstItem="DJs-2I-Fyr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gaS-5t-sia"/>
+                            <constraint firstItem="uUX-Jz-LFW" firstAttribute="top" secondItem="oTY-F7-08V" secondAttribute="bottom" constant="8" id="iEJ-1q-Za4"/>
+                            <constraint firstItem="4jK-se-Mtl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lNw-xx-vSA"/>
+                            <constraint firstItem="Wey-uI-4hA" firstAttribute="top" secondItem="DJs-2I-Fyr" secondAttribute="bottom" constant="49.333333333333314" id="mrv-Mo-ezo"/>
+                            <constraint firstAttribute="bottom" secondItem="4jK-se-Mtl" secondAttribute="bottom" id="nCn-S9-vsx"/>
+                            <constraint firstItem="Wey-uI-4hA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rF6-Wc-ry5"/>
+                            <constraint firstItem="Wey-uI-4hA" firstAttribute="top" secondItem="DJs-2I-Fyr" secondAttribute="bottom" constant="49.333333333333314" id="u6r-UY-vvR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="Email" width="285" height="69"/>
+        <image name="FB" width="285" height="69"/>
+        <image name="Google" width="285" height="69"/>
+    </resources>
+</document>
