@@ -7,17 +7,48 @@
 //
 
 import UIKit
-import SwiftyJSON
 import Alamofire
+import SwiftyJSON
 class ViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
+    var jsonData: JSON?
+    var auth = Authorization()
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTextField()
+        auth.getToken()
     }
+    
+    private func configureTextField(){
+        loginTextField.delegate = self
+    }
+    
+    func search() {
+        if let login = loginTextField.text?.replacingOccurrences(of: " ", with: "", options: .literal, range: nil) {
+            auth.checkUser(login) {
+                completion in
+                if completion != nil {
+                    self.jsonData = completion
+                    self.performSegue(withIdentifier: "Profile", sender: nil)
+                } else {
+                  self.dismiss(animated: true, completion: {
+                         let anotherAlert = UIAlertController(title: "This user does not exist", message: "", preferredStyle: .alert)
+                         let okAction = UIAlertAction(title: "OK", style: .default, handler: {action in
+                         })
+                         anotherAlert.addAction(okAction)
+                         self.present(anotherAlert, animated: true, completion: nil)
+                    })
+                }
+            }
+        }
+    }
+    
 }
-
 extension ViewController: UITextFieldDelegate{
-    private func textFieldShouldReturn(_ textField: UITextField){
+    func textFieldShouldReturn(_ textField: UITextField) ->Bool{
         textField.resignFirstResponder()
+        print(loginTextField.text!)
+        search()
+        return true
     }
 }

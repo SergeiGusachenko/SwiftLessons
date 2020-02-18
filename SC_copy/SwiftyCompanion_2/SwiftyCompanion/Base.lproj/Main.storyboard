@@ -41,7 +41,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <segue destination="ezE-Jb-EOc" kind="show" identifier="Profile" id="1zQ-XP-NEe"/>
+                                    <segue destination="ezE-Jb-EOc" kind="show" identifier="segue" id="1zQ-XP-NEe"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="2781.1594202898555" y="373.66071428571428"/>
         </scene>
-        <!--ProfileView-->
+        <!--Second View-->
         <scene sceneID="752-2V-im8">
             <objects>
-                <viewController title="ProfileView" id="ezE-Jb-EOc" customClass="ProfileViewController" customModule="SwiftyCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Second View" id="ezE-Jb-EOc" customClass="ProfileViewController" customModule="SwiftyCompanion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kZV-Qj-q2O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
