@@ -31,7 +31,7 @@ class ViewController: UIViewController {
                     self.jsonData = completion
                     self.performSegue(withIdentifier: "Profile", sender: nil)
                 } else {
-                  self.dismiss(animated: true, completion: {
+                    self.dismiss(animated: true, completion: {
                          let anotherAlert = UIAlertController(title: "This user does not exist", message: "", preferredStyle: .alert)
                          let okAction = UIAlertAction(title: "OK", style: .default, handler: {action in
                          })
@@ -43,10 +43,16 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Profile" {
+            let new = segue.destination as! ProfileViewController
+            new.data = jsonData
+        }
+    }
+    
 }
 extension ViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) ->Bool{
-        textField.resignFirstResponder()
         print(loginTextField.text!)
         search()
         return true
