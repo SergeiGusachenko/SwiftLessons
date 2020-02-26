@@ -26,6 +26,7 @@ class ProfileViewController:UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(data as Any)
         print("Here we are")
         skillsTable.layer.cornerRadius = 5
         skillsTable.clipsToBounds = true
@@ -54,7 +55,6 @@ class ProfileViewController:UIViewController, UITableViewDelegate, UITableViewDa
             let cell = skillsTable.dequeueReusableCell(withIdentifier: "skill", for: indexPath) as! SkillsTableViewCell
             let skillName = data!["cursus_users"][0]["skills"][indexPath.row]["name"].string
             let skillLevel = data!["cursus_users"][0]["skills"][indexPath.row]["level"].float!
-
             cell.label.text = skillName! + " - level: " + String(skillLevel)
             cell.progress.progress = modf(skillLevel).1
             return cell
@@ -79,6 +79,11 @@ class ProfileViewController:UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func fetchInfo() {
+        if data == nil
+        {
+            return;
+        }
+        
         if let value = data!["displayname"].string {
             name.text = value
         }
@@ -108,6 +113,10 @@ class ProfileViewController:UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func loadPhoto() {
+        if data == nil
+        {
+            return;
+        }
         let strUrl = data!["image_url"].string!
         if let url = URL(string: strUrl) {
             if let data = NSData(contentsOf: url) {
